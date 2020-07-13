@@ -1,12 +1,20 @@
 ## 🔖  Sobre
 Esse é um exemplo de como utilizar o ReactJS em conjunto com o back-end já criado e o Insomnia para criar uma aplicação que lista projetos ao apertar um botão.
 
+## Funcionalidades da aplicação
+
+- Cadastro de novos projetos
+- Listagem de projetos
+- Exclusão de um projeto
+
 ## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - ReactJS
 - Babel
 - Webpack
+- Style e CSS Loaders
+- File Loader
 
 ## 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
@@ -20,7 +28,9 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o ReactJS** _(cria a pasta 'node_modules' e o arquivo 'package-lock.json')_: `yarn add react rect-dom`
 
-**Instalar o Babel**: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli webpack webpack-cli`
+**Instalar o Babel** _(cria o arquivo 'babel.config.js')_: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli`
+
+**Instalar outro plugin do Babel**: `yarn add @babel/plugin-transform-runtime`
 
 **Instalar o Babel-Loader**: `yarn add babel-loader`
 
@@ -28,15 +38,13 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Webpack Dev Server** _(cria o arquivo 'webpack.config.js')_: `yarn add webpack-dev-server -D`
 
+**Instalar o Loader de estilos**: `yarn add style-local css-loader`
 
+**Instalar o Loader de Arquivos**: `yarn add file-loader`
 
-# Aplicação para listar projetos
+**Instalar o Axios**: `yarn add axios`
 
-## Funcionalidades da aplicação
-
-- Cadastro de novos projetos
-- Listagem de projetos
-- Exclusão de um projeto
+# Primeiros códigos
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
