@@ -26,7 +26,7 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Webpack**: `yarn add webpack webpack-cli`
 
-**Instalar o Servidor de Desenvolvimento do Webpack** _(cria o arquivo 'webpack.config.js')_: `yarn add webpack-dev-server -D`
+**Instalar o Webpack Dev Server** _(cria o arquivo 'webpack.config.js')_: `yarn add webpack-dev-server -D`
 
 
 
