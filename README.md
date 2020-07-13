@@ -4,9 +4,9 @@ Esse é um exemplo de como utilizar o ReactJS em conjunto com o back-end já cri
 ## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-ReactJS
-Babel
-Webpack
+- ReactJS
+- Babel
+- Webpack
 
 ## 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
