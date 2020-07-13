@@ -1,3 +1,35 @@
+## 🔖  Sobre
+Esse é um exemplo de como utilizar o ReactJS em conjunto com o back-end já criado e o Insomnia para criar uma aplicação que lista projetos ao apertar um botão.
+
+## 🚀 Tecnologias utilizadas
+O projeto foi desenvolvido utilizando as seguintes tecnologias
+
+ReactJS
+Babel
+Webpack
+
+## 🗂 Como criar essa aplicação do zero
+Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
+Para funcionar, o projeto Backend-com-NodeJS precisa estar pronto.
+
+Criar uma pasta 'frontend' que vai conter nossa aplicação.
+
+Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
+
+## Instalação das bibliotecas
+
+**Instalar o ReactJS** _(cria a pasta 'node_modules' e o arquivo 'package-lock.json')_: `yarn add react rect-dom`
+
+**Instalar o Babel**: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli webpack webpack-cli`
+
+**Instalar o Babel-Loader**: `yarn add babel-loader`
+
+**Instalar o Webpack**: `yarn add webpack webpack-cli`
+
+**Instalar o Servidor de Desenvolvimento do Webpack** _(cria o arquivo 'webpack.config.js')_: `yarn add webpack-dev-server -D`
+
+
+
 # Aplicação para listar projetos
 
 ## Funcionalidades da aplicação
