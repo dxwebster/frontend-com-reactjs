@@ -210,7 +210,12 @@ function App(){
         <>
         <Header title='Projects'/>        
         <ul>
-            {projects.map(project => <li key={project.id}>{project.title}<button onClick={() => handleRemoveProject(project.id)}>Remover</button></li>)} 
+            {projects.map(project =>
+                <li key={project.id}>
+                    {project.title}
+                    <button onClick={() => handleRemoveProject(project.id)}> Remover</button>
+                </li>
+             )} 
         </ul>
        
         <button type="button" onClick={handleAddProject}>Adicionar projeto</button>
