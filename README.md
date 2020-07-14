@@ -40,7 +40,7 @@ Agora vamos criar uma pasta 'frontend' e iniciar o node na pasta (cria o arquivo
 **Instalar o Loader de Arquivos**: `yarn add file-loader`
 
 ## Configuração do Axios
-Nossa aplicação frontend, e criar uma nova pasta chamada 'services' e um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+Na pasta 'frontend', criar uma nova pasta chamada 'services' e um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
 ```js
 import axios from 'axios';
