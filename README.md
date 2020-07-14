@@ -45,8 +45,7 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 # Configurações iniciais
 
 ## Configuração do back-end para conexão com front-end
-
-- Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
 ```js
 import axios from 'axios';
@@ -121,10 +120,10 @@ A partir de agora, a aplicação será visualizada no navegador pelo endereço: 
 
 
 # Primeiros códigos
-- Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
+Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
 Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
 
-- Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado bundle.js. Vai ficar assim:
+Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado bundle.js. Vai ficar assim:
 
 ```html
 <!DOCTYPE html>
@@ -142,7 +141,7 @@ Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo ind
 ```
 
 # Criação de componentes
-- Vamos criar uma pasta 'components' dentro da 'src' e um arquivo chamado Header.js.
+Vamos criar uma pasta 'components' dentro da 'src' e um arquivo chamado Header.js.
 
 ```js
 import React from 'react';
@@ -158,7 +157,7 @@ function Header({ title }) {
 export default Header;
 ```
 
-- Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'.
+Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'.
 O index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
 
 ```js
@@ -170,7 +169,7 @@ import App from './App';
 render(<App />, document.getElementById('app'));
 ```
 
-- O arquivo App.js conterá nosso componente que centraliza a aplicação. As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
+O arquivo App.js conterá nosso componente que centraliza a aplicação. As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
@@ -179,7 +178,7 @@ import './App.css'; // importa o css
 import Header from './components/Header'; // importa o component Header
 ```
 
-- As próximas linhas terão nosso component App:
+As próximas linhas terão nosso component App:
 
 ```js
 function App(){
