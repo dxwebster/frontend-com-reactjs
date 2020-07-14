@@ -72,7 +72,7 @@ module.exports = {
 O webpack vai executar de maneira automática, todos os loaders (babel, css, files) que fazem as conversões de arquivos para que nossa aplicação funcione corretamente em qualquer ambiente. Ele gera o arquivo bundle.js que contém todas essas execuções. Além disso, o Webpack Dev Server adiciona um Live Reloading ao ambiente de desenvolvimento para que, quando tiver alterações no código, o navegador possa ser atualizado automaticamente. Na raiz da aplicação vamos criar um arquivo chamado 'webpack.config.js':
 
 ```js
-const path = require('path'); // utilizar o path para lidar com caminhos em diferentes sistemas operacionais
+const path = require('path'); // path para lidar com caminhos em diferentes SO.
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.js'), // arquivo de entrada
