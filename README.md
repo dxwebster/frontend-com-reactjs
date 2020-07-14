@@ -126,7 +126,7 @@ module.exports = {
 ```
 Executar o comando ```yarn webpack-dev-server --mode development``` para incluir essas configurações no bundle.js e manter a aplicação rodando, mesmo com alterações no código, ele atualiza automaticamente (Live Reloading).
 
-# Configuração do back-end para conectar na aplicação React
+## Configuração do back-end para conectar na aplicação React
 
 Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando.
 Voltar nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js.
@@ -160,7 +160,7 @@ export default Header;
 ```
 
 Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'
-No index.js, vamos escrever os códigos que vão importar nosso componente App criado no App.js:
+No index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
 
 ```js
 import React from 'react';
@@ -181,41 +181,38 @@ import './App.css'; // importa o css
 import Header from './components/Header'; // importa o component Header
 ```
 
-
-
-
+As próximas linhas terão nosso component App:
 
 ```jsx
 // Componente Aplicação
 function App(){
-		const [projects, setProjects] = useState([]); // carrega lista de projetos       
+	const [projects, setProjects] = useState([]); // carrega lista de projetos       
     
-		// Dispara a função de get para buscar as informações do back-end		
-		useEffect(() => { 
-        api.get('projects').then(response =>{
-            setProjects(response.data); // recebe as informações vindas do back-end
-        });
-    }, []);
-    
-		// Cria um novo projeto
-    async function handleAddProject(){       
-				const response = await api.post('projects', {
-            title: "Front-end com ReactJS",
-            owner: "Adriana Lima"
-        })
-        const newProject = response.data; // armazena os novos valores na variável newProject
-				setProjects([...projects, newProject]);// cria um novo array com a lista de projects já existente e a nova lista
-    }
-		
+	// Dispara a função de get para buscar as informações do back-end		
+	useEffect(() => { 
+	   api.get('projects').then(response =>{
+		   setProjects(response.data); // recebe as informações vindas do back-end
+	   });
+	 }, []);
+
+		//Cria um novo projeto
+		async function handleAddProject(){       
+			const response = await api.post('projects', {
+				title: "Front-end com ReactJS",
+				owner: "Adriana Lima"
+			})
+			const newProject = response.data; // armazena os novos valores na variável newProject
+			setProjects([...projects, newProject]);// cria um novo array com a lista de projects já existente e a nova lista
+		}
+
 		// Deleta um projeto
 		async function handleRemoveProject(id) {
-        await api.delete(`projects/${id}`);      
-        const newProjects = projects.filter( 
-         project => project.id !== id 
-        )    
-        setProjects(newProjects); // cria um novo array com a lista de projects sem o project removido
-	  }
+			await api.delete(`projects/${id}`);      
+			const newProjects = projects.filter( project => project.id !== id )    
+			setProjects(newProjects); // cria um novo array com a lista de projects sem o project removido
+		}
 
+		// O retorno do componente, será o funcionamento de um item da lista por meio de um botão
 		return(
 			<>
 			<Header title='Projects'/>        
