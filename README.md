@@ -81,7 +81,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.resolve(__dirname, 'public'), // o caminho do diretório dos arquivos públicos da aplicação
+        contentBase: path.resolve(__dirname, 'public'), // arquivos públicos 
     },
     module: {
         rules: [
