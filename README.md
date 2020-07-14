@@ -42,8 +42,6 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Loader de Arquivos**: `yarn add file-loader`
 
-# Configurações iniciais
-
 ## Configuração do back-end para conexão com front-end
 Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
@@ -117,7 +115,6 @@ module.exports = {
 # Executando o Webpack
 Vamos rodar nossa aplicação pelo o comando `yarn webpack-dev-server --mode development`.
 A partir de agora, a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
-
 
 # Primeiros códigos
 Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
