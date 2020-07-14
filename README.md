@@ -36,7 +36,7 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Webpack**: `yarn add webpack webpack-cli`
 
-**Instalar o Webpack Dev Server** _(cria o arquivo 'webpack.config.js')_: `yarn add webpack-dev-server -D`
+**Instalar o Webpack Dev Server**: `yarn add webpack-dev-server -D`
 
 **Instalar o Loader de estilos**: `yarn add style-local css-loader`
 
@@ -45,6 +45,98 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 **Instalar o Axios**: `yarn add axios`
 
 # Primeiros códigos
+
+Dentro da pasta da nossa aplicação, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
+
+Utilizando o emmet que já vem por padrão do VScode, digitar html, para criar a estrutura html5 básica.
+Criar uma div app dentro do body. Vai ficar assim:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+</body>
+</html>
+```
+Fazer as seguintes configurações no arquivo babel.config.js
+
+```js
+module.exports = {
+    presets: [
+        '@babel/preset-env', //converte o código do js moderno para um mais antigo, baseado no ambiente (enviroment) da aplicação (ex: funcionalidades ou versões dos browsers)
+        '@babel/preset-react' // adicona as funcionalidades do react na conversão
+    ],
+    plugins:[
+        '@babel/plugin-transform-runtime'
+    ]
+};
+```
+Criar um arquivo index.js e executar o seguinte comando para gerar o arquivo bundle.js
+```yarn babel src/index.js --out-file public/bundle.js```
+
+Na raiz da aplicação, criar um arquivo chamado webpack.config.js com as seguintes configurações:
+
+```js
+const path = require('path'); // utilizar o path para lidar com caminhos em diferentes sistemas operacionais
+
+module.exports = {
+    entry: path.resolve(__dirname, 'src', 'index.js'), // arquivo de entrada
+    output: {
+        path: path.resolve(__dirname, 'public'), // arquivo de saída
+        filename: 'bundle.js'
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public'), // o caminho do diretório dos arquivos públicos da aplicação
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/, // toda vez que eu tiver um arquivo js 
+                exclude: /node_modules/, // que não estiver na pasta node_modules
+                use:{
+                    loader:'babel-loader', // converta esses arquivos
+                }   
+            },
+            {
+                test: /\.css$/, // toda vez que eu tiver um arquivo css 
+                exclude: /node_modules/, // que não estiver na pasta node_modules
+                use:[
+                    { loader:'style-loader' }, // injeta  o css dentro do html
+                    { loader:'css-loader' },   // interpreta as importações que tem dentro do css
+                ]  
+            },
+            {
+                test: /.*\.(gif|png|jpe?g)$/i, // toda vez que eu tiver arquivos gif, png, jpeg, jpg 
+                use:[
+                    { loader:'file-loader' }, // faz o load das imagens
+                ]  
+            },
+        ]
+    },
+}; 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
