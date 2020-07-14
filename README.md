@@ -17,8 +17,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - File Loader
 
 ## 🗂 Como criar essa aplicação do zero
-Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
-Para funcionar, o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS) precisa estar pronto.
+Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero. Vamos utilizar o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS). Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. 
 
 Criar uma pasta 'frontend' que vai conter nossa aplicação.
 
@@ -42,8 +41,8 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Loader de Arquivos**: `yarn add file-loader`
 
-## Configuração do back-end para conexão com front-end
-Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+## Configuração do Axios
+Nossa aplicação frontend, e criar uma nova pasta chamada 'services' e um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
 ```js
 import axios from 'axios';
