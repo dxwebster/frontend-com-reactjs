@@ -17,11 +17,9 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - File Loader
 
 ## 🗂 Como criar essa aplicação do zero
-Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero. Vamos utilizar o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS). Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. 
+Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero. Vamos utilizar o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS). O primeiro paso é abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. 
 
-Criar uma pasta 'frontend' que vai conter nossa aplicação.
-
-Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
+Agora vamos criar uma pasta 'frontend' e iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 ## Instalação das bibliotecas
 
