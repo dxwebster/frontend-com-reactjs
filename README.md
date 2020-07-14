@@ -28,9 +28,7 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o ReactJS** _(cria a pasta 'node_modules' e o arquivo 'package-lock.json')_: `yarn add react rect-dom`
 
-**Instalar o Babel** _(cria o arquivo 'babel.config.js')_: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli`
-
-**Instalar outro plugin do Babel**: `yarn add @babel/plugin-transform-runtime`
+**Instalar o Babel** _(cria o arquivo 'babel.config.js')_: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli @babel/plugin-transform-runtim`
 
 **Instalar o Babel-Loader**: `yarn add babel-loader`
 
@@ -81,7 +79,7 @@ module.exports = {
 };
 ```
 Criar um arquivo index.js e executar o seguinte comando para gerar o arquivo bundle.js
-```yarn babel src/index.js --out-file public/bundle.js```
+`yarn babel src/index.js --out-file public/bundle.js`
 
 ## Configuração do Webpack
 
@@ -126,16 +124,42 @@ module.exports = {
     },
 }; 
 ```
-
-
 Executar o comando ```yarn webpack-dev-server --mode development``` para incluir essas configurações no bundle.js e manter a aplicação rodando, mesmo com alterações no código, ele atualiza automaticamente (Live Reloading).
 
+# Configuração do back-end para conectar na aplicação React
+
+Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando.
+Voltar nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js.
+Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+
+```js
+import axios from 'axios';
+
+const api = axios.create({ baseURL: 'http://localhost:3333' });
+ 
+export default api;
+```
 
 # Primeiros códigos
 
 Com todas as bibliotecas instaladas e devidamente configuradas, vamos começar a escrever os primeiros códigos da aplicação.
-Criar dois arquivos na pasta src, o 'App.js' e 'index.js'
+A primeira coisa que vamos fazer é criar uma pasta components dentro do src e um arquivo chamado Header.js com nosso primeiro componente.
 
+```js
+import React from 'react';
+
+function Header({ title }) {
+    return (
+       <header>
+           <h1>{title}</h1>
+       </header>
+    );
+}
+
+export default Header;
+```
+
+Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'
 No index.js, vamos escrever os códigos que vão importar nosso componente App criado no App.js:
 
 ```js
@@ -148,13 +172,20 @@ render(<App />, document.getElementById('app'));
 ```
 
 O arquivo App.js conterá nosso componente que centraliza a aplicação.
+As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
 import api from './services/api'; // importa a api que contém o axios para conectar com o bak-end
 import './App.css'; // importa o css
 import Header from './components/Header'; // importa o component Header
+```
 
+
+
+
+
+```jsx
 // Componente Aplicação
 function App(){
 		const [projects, setProjects] = useState([]); // carrega lista de projetos       
