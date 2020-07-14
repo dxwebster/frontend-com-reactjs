@@ -26,21 +26,21 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 ## Instalação das bibliotecas
 
-**Instalar o ReactJS** _(cria a pasta 'node_modules' e o arquivo 'package-lock.json')_: `yarn add react rect-dom`
+**Instalar o ReactJS**: `yarn add react rect-dom`
 
-**Instalar o Babel** _(cria o arquivo 'babel.config.js')_: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli @babel/plugin-transform-runtim`
-
-**Instalar o Babel-Loader**: `yarn add babel-loader`
+**Instalar o Axios**: `yarn add axios`
 
 **Instalar o Webpack**: `yarn add webpack webpack-cli`
 
-**Instalar o Webpack Dev Server** _(vai monitorar as modificações do código)_: `yarn add webpack-dev-server -D`
+**Instalar o Webpack Dev Server**: `yarn add webpack-dev-server -D`
 
-**Instalar o Loader de estilos**: `yarn add style-local css-loader`
+**Instalar o Babel**: `yarn add babel-loader`
+
+**Instalar plugins do Babel**: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli @babel/plugin-transform-runtim`
+
+**Instalar o Loader de Estilos**: `yarn add style-local css-loader`
 
 **Instalar o Loader de Arquivos**: `yarn add file-loader`
-
-**Instalar o Axios**: `yarn add axios`
 
 # Configurações iniciais
 
