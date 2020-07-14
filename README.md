@@ -44,7 +44,7 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 # Configurações iniciais
 
-## Configuração do back-end para conectar na aplicação React
+## Configuração do back-end para conexão com front-end
 
 - Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
@@ -58,7 +58,7 @@ export default api;
 ```
 
 ## Configuração do Babel
-- Escrever as seguintes configurações no arquivo babel.config.js
+Para utilizar o Babel, precisamos fazer algumas configurações no arquivo babel.config.js
 
 ```js
 module.exports = {
@@ -73,8 +73,7 @@ module.exports = {
 ```
 
 ## Configuração do Webpack
-
-- Na raiz da aplicação, criar um arquivo chamado webpack.config.js com as seguintes configurações:
+O webpack vai executar de maneira automática, todos os loaders (babel, css, files) que fazem as conversões de arquivos para que nossa aplicação funcione corretamente em qualquer ambiente. Ele gera o arquivo bundle.js que contém todas essas execuções. Além disso, o Webpack Dev Server adiciona um Live Reloading ao ambiente de desenvolvimento para que, quando tiver alterações no código, o navegador possa ser atualizado automaticamente. Na raiz da aplicação vamos criar um arquivo chamado 'webpack.config.js':
 
 ```js
 const path = require('path'); // utilizar o path para lidar com caminhos em diferentes sistemas operacionais
@@ -116,9 +115,8 @@ module.exports = {
 }; 
 ```
 
-# Executando servidor do Front-end
-Com o comando `yarn webpack-dev-server --mode development`, vamos manter nossa aplicação rodando. O webpack, junto com o Babel, vão se encarregar de carregar e converter todo nosso código para que o navegador entenda. Além disso, o Webpack dev server adiciona um Live Reloading ao ambiente de desenvolvimento para que, quando tiver alterações no código, o navegador possa ser atualizado automaticamente.
-
+# Executando o Webpack
+Vamos rodar nossa aplicação pelo o comando `yarn webpack-dev-server --mode development`.
 A partir de agora, a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
 
 
