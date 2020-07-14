@@ -1,13 +1,13 @@
-# 🔖  Sobre
+## 🔖  Sobre
 Esse é um exemplo de como utilizar o ReactJS em conjunto com o back-end já criado e o Insomnia para criar uma aplicação que lista projetos ao apertar um botão.
 
-# Funcionalidades da aplicação
+## Funcionalidades da aplicação
 
 - Listagem de projetos 
 - Cadastro de novos projetos
 - Exclusão de um projeto
 
-# 🚀 Tecnologias utilizadas
+## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - ReactJS
@@ -16,7 +16,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - Style e CSS Loaders
 - File Loader
 
-# 🗂 Como criar essa aplicação do zero
+## 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero. Vamos utilizar o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS). Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. 
 
 Criar uma pasta 'frontend' que vai conter nossa aplicação.
