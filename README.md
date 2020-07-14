@@ -3,8 +3,8 @@ Esse é um exemplo de como utilizar o ReactJS em conjunto com o back-end já cri
 
 ## Funcionalidades da aplicação
 
-- Listagem de projetos (cadastrados pela interface do Insomnia)
-- Cadastro de novos projetos (criados pela aplicação)
+- Listagem de projetos 
+- Cadastro de novos projetos
 - Exclusão de um projeto
 
 ## 🚀 Tecnologias utilizadas
@@ -46,10 +46,9 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 ## Configuração do Babel
 
-Dentro da pasta da nossa aplicação, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
+- Dentro da pasta da nossa aplicação, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
 
-Utilizando o emmet que já vem por padrão do VScode, digitar html, para criar a estrutura html5 básica.
-Criar uma div app dentro do body. Vai ficar assim:
+- Utilizando o emmet que já vem por padrão do VScode, digitar html, para criar a estrutura html5 básica. Criar uma div app dentro do body e chamar um script chamado bundle.js. Vai ficar assim:
 
 ```html
 <!DOCTYPE html>
@@ -65,7 +64,7 @@ Criar uma div app dentro do body. Vai ficar assim:
 </body>
 </html>
 ```
-Fazer as seguintes configurações no arquivo babel.config.js
+- Fazer as seguintes configurações no arquivo babel.config.js
 
 ```js
 module.exports = {
@@ -78,12 +77,11 @@ module.exports = {
     ]
 };
 ```
-Criar um arquivo index.js e executar o seguinte comando para gerar o arquivo bundle.js
-`yarn babel src/index.js --out-file public/bundle.js`
+- Criar um arquivo index.js e executar o seguinte comando para gerar o arquivo bundle.js: `yarn babel src/index.js --out-file public/bundle.js`
 
 ## Configuração do Webpack
 
-Na raiz da aplicação, criar um arquivo chamado webpack.config.js com as seguintes configurações:
+- Na raiz da aplicação, criar um arquivo chamado webpack.config.js com as seguintes configurações:
 
 ```js
 const path = require('path'); // utilizar o path para lidar com caminhos em diferentes sistemas operacionais
@@ -124,15 +122,13 @@ module.exports = {
     },
 }; 
 ```
-Executar o comando ```yarn webpack-dev-server --mode development``` para incluir essas configurações no bundle.js e manter a aplicação rodando, mesmo com alterações no código, ele atualiza automaticamente (Live Reloading).
+- Executar o comando ```yarn webpack-dev-server --mode development``` para incluir essas configurações no bundle.js e manter a aplicação rodando, mesmo com alterações no código, ele atualiza automaticamente (Live Reloading).
 
-A partir de agora a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
+- A partir de agora a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
 
 ## Configuração do back-end para conectar na aplicação React
 
-Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando.
-Voltar nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js.
-Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+- Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
 ```js
 import axios from 'axios';
@@ -141,13 +137,11 @@ const api = axios.create({ baseURL: 'http://localhost:3333' });
  
 export default api;
 ```
-No arquivo api, indicamos em qual porta nosso back-end está funcionando, neste caso na porta 3333.
-Agora o objetivo é fazer com que as listas criadas pelo backend e Insomnia, sirvam de dados que vão alimentar nossa lista de projetos exibidas no navegador pelo front-end.
+- No arquivo api, indicamos em qual porta nosso back-end está funcionando, neste caso na porta 3333.
 
 # Primeiros códigos
 
-Com todas as bibliotecas instaladas e devidamente configuradas, vamos começar a escrever os primeiros códigos da aplicação.
-A primeira coisa que vamos fazer é criar uma pasta components dentro do src e um arquivo chamado Header.js com nosso primeiro componente.
+- Com todas as bibliotecas instaladas e devidamente configuradas, vamos começar a escrever os primeiros códigos da aplicação. A primeira coisa que vamos fazer é criar uma pasta components dentro do src e um arquivo chamado Header.js com nosso primeiro componente.
 
 ```js
 import React from 'react';
@@ -163,8 +157,7 @@ function Header({ title }) {
 export default Header;
 ```
 
-Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'.
-O index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
+- Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'. O index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
 
 ```js
 import React from 'react';
@@ -175,8 +168,7 @@ import App from './App';
 render(<App />, document.getElementById('app'));
 ```
 
-O arquivo App.js conterá nosso componente que centraliza a aplicação.
-As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
+- O arquivo App.js conterá nosso componente que centraliza a aplicação. As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
@@ -185,9 +177,9 @@ import './App.css'; // importa o css
 import Header from './components/Header'; // importa o component Header
 ```
 
-As próximas linhas terão nosso component App:
+- As próximas linhas terão nosso component App:
 
-```jsx
+```js
 function App(){
     const [projects, setProjects] = useState([]); 
     
@@ -238,9 +230,9 @@ export default App;
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled_m1Upqgswo.png"/>
 
-# Conexão com back-end
+# Visualizando no Insomnia
 
-- Essa aplicação funciona armazenando os dados na ferramenta de testes Insonmia
+- Pelo insomnia, podemos acompanhar o funcionamento da inclusão e remoção de projetos.
 - Cada vez que aperta o botão adicionar ou remover projeto, modifica a lista do  back-end
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled__1__Unamo-Qpo.png"/>
