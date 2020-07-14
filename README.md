@@ -18,7 +18,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ## 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
-Para funcionar, o projeto Backend-com-NodeJS precisa estar pronto.
+Para funcionar, o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS) precisa estar pronto.
 
 Criar uma pasta 'frontend' que vai conter nossa aplicação.
 
