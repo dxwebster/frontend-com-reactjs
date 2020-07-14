@@ -36,7 +36,7 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Webpack**: `yarn add webpack webpack-cli`
 
-**Instalar o Webpack Dev Server**: `yarn add webpack-dev-server -D`
+**Instalar o Webpack Dev Server** _(vai monitorar as modificações do código)_: `yarn add webpack-dev-server -D`
 
 **Instalar o Loader de estilos**: `yarn add style-local css-loader`
 
@@ -44,7 +44,9 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 **Instalar o Axios**: `yarn add axios`
 
-# Primeiros códigos
+# Configurações iniciais
+
+## Configuração do Babel
 
 Dentro da pasta da nossa aplicação, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
 
@@ -80,6 +82,8 @@ module.exports = {
 ```
 Criar um arquivo index.js e executar o seguinte comando para gerar o arquivo bundle.js
 ```yarn babel src/index.js --out-file public/bundle.js```
+
+## Configuração do Webpack
 
 Na raiz da aplicação, criar um arquivo chamado webpack.config.js com as seguintes configurações:
 
@@ -124,19 +128,26 @@ module.exports = {
 ```
 
 
+Executar o comando ```yarn webpack-dev-server --mode development``` para incluir essas configurações no bundle.js e manter a aplicação rodando, mesmo com alterações no código, ele atualiza automaticamente (Live Reloading).
 
 
+# Primeiros códigos
 
+Com todas as bibliotecas instaladas e devidamente configuradas, vamos começar a escrever os primeiros códigos da aplicação.
+Criar dois arquivos na pasta src, o 'App.js' e 'index.js'
 
+No index.js, vamos escrever os códigos que vão importar nosso componente App criado no App.js:
 
+```js
+import React from 'react';
+import { render } from 'react-dom';
 
+import App from './App';
 
+render(<App />, document.getElementById('app'));
+```
 
-
-
-
-
-
+O arquivo App.js conterá nosso componente que centraliza a aplicação.
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
