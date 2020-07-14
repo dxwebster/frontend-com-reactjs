@@ -44,27 +44,21 @@ Iniciar o node na pasta (cria o arquivo 'package.json'): `yarn init -y`
 
 # Configurações iniciais
 
-## Configuração do Babel
+## Configuração do back-end para conectar na aplicação React
 
-- Dentro da pasta da nossa aplicação, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
+- Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
-- Utilizando o emmet que já vem por padrão do VScode, digitar html, para criar a estrutura html5 básica. Criar uma div app dentro do body e chamar um script chamado bundle.js. Vai ficar assim:
+```js
+import axios from 'axios';
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReactJS</title>
-</head>
-<body>
-    <div id="app"></div>
-    <script src="bundle.js"></script>
-</body>
-</html>
+//  No arquivo api, indicamos em qual porta nosso back-end está funcionando, neste caso na porta 3333.
+const api = axios.create({ baseURL: 'http://localhost:3333' });
+ 
+export default api;
 ```
-- Fazer as seguintes configurações no arquivo babel.config.js
+
+## Configuração do Babel
+- Escrever as seguintes configurações no arquivo babel.config.js
 
 ```js
 module.exports = {
@@ -122,26 +116,36 @@ module.exports = {
     },
 }; 
 ```
-- Executar o comando ```yarn webpack-dev-server --mode development``` para incluir essas configurações no bundle.js e manter a aplicação rodando, mesmo com alterações no código, ele atualiza automaticamente (Live Reloading).
 
-- A partir de agora a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
+# Executando servidor do Front-end
+Com o comando `yarn webpack-dev-server --mode development`, vamos manter nossa aplicação rodando. O webpack, junto com o Babel, vão se encarregar de carregar e converter todo nosso código para que o navegador entenda. Além disso, o Webpack dev server adiciona um Live Reloading ao ambiente de desenvolvimento para que, quando tiver alterações no código, o navegador possa ser atualizado automaticamente.
 
-## Configuração do back-end para conectar na aplicação React
+A partir de agora, a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
 
-- Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
-
-```js
-import axios from 'axios';
-
-//  No arquivo api, indicamos em qual porta nosso back-end está funcionando, neste caso na porta 3333.
-const api = axios.create({ baseURL: 'http://localhost:3333' });
- 
-export default api;
-```
 
 # Primeiros códigos
+- Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
+Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
 
-- Com todas as bibliotecas instaladas e devidamente configuradas, vamos começar a escrever os primeiros códigos da aplicação. A primeira coisa que vamos fazer é criar uma pasta components dentro do src e um arquivo chamado Header.js com nosso primeiro componente.
+- Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado bundle.js. Vai ficar assim:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+</body>
+</html>
+```
+
+# Criação de componentes
+- Vamos criar uma pasta 'components' dentro da 'src' e um arquivo chamado Header.js.
 
 ```js
 import React from 'react';
@@ -157,7 +161,8 @@ function Header({ title }) {
 export default Header;
 ```
 
-- Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'. O index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
+- Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'.
+O index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
 
 ```js
 import React from 'react';
