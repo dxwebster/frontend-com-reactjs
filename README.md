@@ -1,13 +1,13 @@
-## 🔖  Sobre
+# 🔖  Sobre
 Esse é um exemplo de como utilizar o ReactJS em conjunto com o back-end já criado e o Insomnia para criar uma aplicação que lista projetos ao apertar um botão.
 
-## Funcionalidades da aplicação
+# Funcionalidades da aplicação
 
 - Listagem de projetos 
 - Cadastro de novos projetos
 - Exclusão de um projeto
 
-## 🚀 Tecnologias utilizadas
+# 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - ReactJS
@@ -16,7 +16,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - Style e CSS Loaders
 - File Loader
 
-## 🗂 Como criar essa aplicação do zero
+# 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero. Vamos utilizar o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS). Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. 
 
 Criar uma pasta 'frontend' que vai conter nossa aplicação.
@@ -111,11 +111,11 @@ module.exports = {
 }; 
 ```
 
-# Executando o Webpack
+## Executando o Webpack
 Vamos rodar nossa aplicação pelo o comando `yarn webpack-dev-server --mode development`.
 A partir de agora, a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
 
-# Primeiros códigos
+## Primeiros códigos
 Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
 Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
 
@@ -136,7 +136,7 @@ Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chama
 </html>
 ```
 
-# Criação de componentes
+## Criação de componentes
 Vamos criar uma pasta 'components' dentro da 'src' e um arquivo chamado Header.js.
 
 ```js
@@ -226,13 +226,13 @@ function App(){
 export default App;
 ```
 
-# Exibição na tela
+## Exibição na tela
 - Para incluir um novo projeto (pelo app), clicar no botão "Adicionar Projeto"
 - Quando aperta o botão remover, deleta um projeto
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled_m1Upqgswo.png"/>
 
-# Visualizando no Insomnia
+## Visualizando no Insomnia
 
 - Pelo insomnia, podemos acompanhar o funcionamento da inclusão e remoção de projetos.
 - Cada vez que aperta o botão adicionar ou remover projeto, modifica a lista do  back-end
