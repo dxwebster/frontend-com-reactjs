@@ -71,7 +71,6 @@ module.exports = {
     ]
 };
 ```
-- Criar um arquivo index.js e executar o seguinte comando para gerar o arquivo bundle.js: `yarn babel src/index.js --out-file public/bundle.js`
 
 ## Configuração do Webpack
 
