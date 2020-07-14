@@ -128,16 +128,16 @@ module.exports = {
 
 ## Configuração do back-end para conectar na aplicação React
 
-- Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+- Abrir a pasta backend e executar o `yarn dev` para manter o servidor rodando. Voltar na nossa aplicação frontend, e criar uma nova pasta chamada 'services' com um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
 ```js
 import axios from 'axios';
 
+//  No arquivo api, indicamos em qual porta nosso back-end está funcionando, neste caso na porta 3333.
 const api = axios.create({ baseURL: 'http://localhost:3333' });
  
 export default api;
 ```
-- No arquivo api, indicamos em qual porta nosso back-end está funcionando, neste caso na porta 3333.
 
 # Primeiros códigos
 
