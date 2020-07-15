@@ -13,6 +13,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 - ReactJS
 - Babel
 - Webpack
+- Axios
 - Style e CSS Loaders
 - File Loader
 
