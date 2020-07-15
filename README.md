@@ -20,7 +20,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 ## 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero. Vamos utilizar o projeto [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS) como nosso back-end. O primeiro paso é abrir essa pasta backend e executar o `yarn dev` para manter o servidor rodando. 
 
-Agora vamos criar uma pasta 'frontend' que vai conter nossa aplicação.
+Agora vamos criar uma pasta 'frontend' que é onde vamos trabalhar nossa aplicação front-end.
 
 ## Instalação das bibliotecas
 
