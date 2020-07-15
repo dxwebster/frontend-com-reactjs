@@ -125,7 +125,7 @@ Com tudo instalado e devidamente configurado, vamos começar a escrever os prime
 Na raíz, criar as pastas 'src' e 'public'. Na pasta 'public', criar o arquivo 'index.html'.
 
 ```html
-<!-- Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado 'bundle.js'.-->
+<!-- Criar a estrutura html5 básica, uma div '#app' no body e depois uma tag script chamado o 'bundle.js'.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
