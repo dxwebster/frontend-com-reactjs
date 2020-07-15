@@ -43,7 +43,7 @@ Agora vamos criar uma pasta 'frontend' que é onde vamos trabalhar nossa aplica�
 **Instalar o Loader de Arquivos**: `yarn add file-loader`
 
 ## Configuração do Axios
-Na pasta 'frontend', criar uma nova pasta chamada 'services' e um arquivo api.js. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
+Na pasta 'frontend', criar uma nova pasta chamada 'services' e um arquivo 'api.js'. Vamos importar o axios que vai fazer as chamadas api e conectar o front com o back.
 
 ```js
 import axios from 'axios';
@@ -55,7 +55,7 @@ export default api;
 ```
 
 ## Configuração do Babel
-Para utilizar o Babel, precisamos fazer algumas configurações no arquivo babel.config.js
+Para utilizar o Babel, precisamos fazer algumas configurações no arquivo 'babel.config.js':
 
 ```js
 module.exports = {
@@ -70,7 +70,7 @@ module.exports = {
 ```
 
 ## Configuração do Webpack
-O webpack vai executar de maneira automática, todos os loaders (babel, css, files) que fazem as conversões de arquivos para que nossa aplicação funcione corretamente em qualquer ambiente. Ele gera o arquivo bundle.js que contém todas essas execuções. Além disso, o Webpack Dev Server adiciona um Live Reloading ao ambiente de desenvolvimento para que, quando tiver alterações no código, o navegador possa ser atualizado automaticamente. Na raiz da aplicação vamos criar um arquivo chamado 'webpack.config.js':
+O webpack vai executar de maneira automática, todos os loaders (babel, css, files) que fazem as conversões de arquivos para que nossa aplicação funcione corretamente em qualquer ambiente. Ele gera o arquivo 'bundle.js' que contém todas essas execuções. Além disso, o Webpack Dev Server adiciona um Live Reloading ao ambiente de desenvolvimento para que, quando tiver alterações no código, o navegador possa ser atualizado automaticamente. Na raíz da aplicação vamos criar um arquivo chamado 'webpack.config.js':
 
 ```js
 const path = require('path'); // path para lidar com caminhos em diferentes SO.
@@ -114,19 +114,18 @@ module.exports = {
 
 ## Executando o Webpack
 Para inicializar o servidor do frontend precisamos executar comando `yarn webpack-dev-server --mode development`.
-Para facilitar essa chamada do webpack, vamos ao arquivo package.json criar um script para o ambiente de desenvolvimento (dev) e um para ser utilizado quando a aplicação vai online (build).
+Para facilitar essa chamada do webpack, vamos ao arquivo 'package.json' criar um script para o ambiente de desenvolvimento (dev) e um para ser utilizado quando a aplicação vai online (build).
 
 <img src="https://ik.imagekit.io/dxwebster/Screenshot_1_KSnSK0MHp.jpg" />
 
-Assim, podemos executar o comando `yarn dev` para executar o servidor e visualizar a aplicação no navegador pelo endereço <localhost:8080>
+Assim, podemos executar o comando `yarn dev` para executar o servidor e visualizar a aplicação no navegador pelo endereço 'http://localhost:8080'
 
 ## Primeiros códigos
 Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
-Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo index.html.
-
-Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado bundle.js. Vai ficar assim:
+Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo 'index.html'.
 
 ```html
+<!-- Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado bundle.js.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
