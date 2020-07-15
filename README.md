@@ -110,8 +110,8 @@ module.exports = {
 ```
 
 ## Executando o Webpack
-Para  rodar nossa aplicação precisamos executar comando `yarn webpack-dev-server --mode development`.
-Para facilitar essa chamada do webpack, vamos ao arquivo package.json criar dois scripts.
+Para inicializar o servidor do frontend precisamos executar comando `yarn webpack-dev-server --mode development`.
+Para facilitar essa chamada do webpack, vamos ao arquivo package.json criar um script para o ambiente de desenvolvimento (dev) e um para ser utilizado quando a aplicação vai online (build).
 
 <img src="https://ik.imagekit.io/dxwebster/Screenshot_1_KSnSK0MHp.jpg" />
 
