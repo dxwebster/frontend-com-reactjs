@@ -61,7 +61,7 @@ Para utilizar o Babel, precisamos fazer algumas configurações no arquivo 'babe
 module.exports = {
     presets: [
         '@babel/preset-env', // converte o código do js moderno para um mais antigo baseado no ambiente 
-        '@babel/preset-react' // adicona as funcionalidades do react na conversão
+        '@babel/preset-react' // adiciona as funcionalidades do react na conversão
     ],
     plugins:[
         '@babel/plugin-transform-runtime' // permite a utilização de aync await
