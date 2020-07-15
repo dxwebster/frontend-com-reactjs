@@ -122,10 +122,10 @@ Assim, podemos executar o comando `yarn dev` para executar o servidor e visualiz
 
 ## Primeiros códigos
 Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
-Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo 'index.html'.
+Na raíz, criar as pastas 'src' e 'public'. Na pasta 'public', criar o arquivo 'index.html'.
 
 ```html
-<!-- Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado bundle.js.-->
+<!-- Criar a estrutura html5 básica com uma div '#app' dentro do body e depois chamar um script chamado 'bundle.js'.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,7 +141,7 @@ Na raíz, criar as pastas 'src' e 'public'. Na pasta public, criar o arquivo 'in
 ```
 
 ## Criação de componentes
-Vamos criar uma pasta 'components' dentro da 'src' e um arquivo chamado Header.js.
+Vamos criar uma pasta 'components' dentro da 'src' e um arquivo chamado 'Header.js'.
 
 ```js
 import React from 'react';
@@ -157,8 +157,8 @@ function Header({ title }) {
 export default Header;
 ```
 
-Agora vamos, criar dois arquivos na pasta src, o 'App.js' e 'index.js'.
-O index.js, vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
+Agora vamos, criar dois arquivos na pasta 'src', o 'App.js' e 'index.js'.
+No 'index.js', vamos escrever os códigos que vão importar um componente App que vamos criar no 'App.js':
 
 ```js
 import React from 'react';
@@ -169,7 +169,7 @@ import App from './App';
 render(<App />, document.getElementById('app'));
 ```
 
-O arquivo App.js conterá nosso componente que centraliza a aplicação. As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
+O arquivo 'App.js' conterá nosso componente que centraliza a aplicação. As primeiras linhas de código tem a função de importar tudo que vamos utilizar na aplicação
 
 ```jsx
 import React, { useState, useEffect } from 'react'; // importa o react
@@ -231,14 +231,14 @@ export default App;
 ```
 
 ## Exibição na tela
-- Para incluir um novo projeto (pelo app), clicar no botão "Adicionar Projeto"
+- Para incluir um novo projeto, clicar no botão "Adicionar Projeto"
 - Quando aperta o botão remover, deleta um projeto
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled_m1Upqgswo.png"/>
 
 ## Visualizando no Insomnia
 
-- Pelo insomnia, podemos acompanhar o funcionamento da inclusão e remoção de projetos.
+- Pelo Insomnia, podemos acompanhar o funcionamento da inclusão e remoção de projetos.
 - Cada vez que aperta o botão adicionar ou remover projeto, modifica a lista do  back-end
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled__1__Unamo-Qpo.png"/>
