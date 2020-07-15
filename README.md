@@ -110,12 +110,12 @@ module.exports = {
 ```
 
 ## Executando o Webpack
-Vamos rodar nossa aplicação pelo o comando `yarn webpack-dev-server --mode development`.
-A partir de agora, a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
-
+Para  rodar nossa aplicação precisamos executar comando `yarn webpack-dev-server --mode development`.
 Para facilitar essa chamada do webpack, vamos ao arquivo package.json criar dois scripts.
 
 <img src="https://ik.imagekit.io/dxwebster/Screenshot_1_KSnSK0MHp.jpg" />
+
+Assim, podemos executar o comando `yarn dev` para executar o servidor e visualizar a aplicação no navegador pelo endereço <localhost:8080>
 
 ## Primeiros códigos
 Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
