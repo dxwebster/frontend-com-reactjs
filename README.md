@@ -33,7 +33,7 @@ Agora vamos criar uma pasta 'frontend' e iniciar o node na pasta (cria o arquivo
 
 **Instalar o Babel**: `yarn add babel-loader`
 
-**Instalar plugins do Babel**: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli @babel/plugin-transform-runtim`
+**Instalar plugins do Babel**: `yarn add @babel/core @babel/preset-env @babel/preset-react @babel/cli @babel/plugin-transform-runtime`
 
 **Instalar o Loader de Estilos**: `yarn add style-local css-loader`
 
@@ -61,7 +61,7 @@ module.exports = {
         '@babel/preset-react' // adicona as funcionalidades do react na conversão
     ],
     plugins:[
-        '@babel/plugin-transform-runtime'
+        '@babel/plugin-transform-runtime' // permite a utilização de aync await
     ]
 };
 ```
@@ -112,6 +112,10 @@ module.exports = {
 ## Executando o Webpack
 Vamos rodar nossa aplicação pelo o comando `yarn webpack-dev-server --mode development`.
 A partir de agora, a aplicação será visualizada no navegador pelo endereço: <localhost:8080>
+
+Para facilitar essa chamada do webpack, vamos ao arquivo package.json criar dois scripts.
+
+<img src="https://ik.imagekit.io/dxwebster/Screenshot_1_KSnSK0MHp.jpg" />
 
 ## Primeiros códigos
 Com tudo instalado e devidamente configurado, vamos começar a escrever os primeiros códigos da aplicação.
