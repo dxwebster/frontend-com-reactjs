@@ -1,5 +1,5 @@
 ## 🔖  Sobre
-Esse é um exemplo de como utilizar o ReactJS em conjunto com o [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS) para criar uma aplicação que lista projetos ao apertar um botão e também permite excluir cada linha da lista.
+Esse é um exemplo de como utilizar o ReactJS em conjunto com o [Backend-com-NodeJS](https://github.com/dxwebster/Backend-com-NodeJS) para criar uma aplicação que lista projetos ao pressionar um botão e também permite excluí-los individualmente.
 
 ## Funcionalidades da aplicação
 
